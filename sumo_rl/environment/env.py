@@ -409,6 +409,7 @@ class SumoEnvironment(gym.Env):
             "system_total_waiting_time": sum(waiting_times),
             "system_mean_waiting_time": 0.0 if len(vehicles) == 0 else np.mean(waiting_times),
             "system_mean_speed": 0.0 if len(vehicles) == 0 else np.mean(speeds),
+            "system_total_queue": self.traffic_signals[self.ts_ids[0]].get_total_queued(),
         }
 
     def _get_per_agent_info(self):

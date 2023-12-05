@@ -113,3 +113,5 @@ settings.json
 *.csv
 /logs
 /wandb
+experiments/ped_weight.zip
+experiments/ped2env_weight.zip

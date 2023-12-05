@@ -26,8 +26,6 @@ if __name__ == "__main__":
         reward_fn="pressure",
     )
 
-
-
     model = DQN(
         env=env,
         policy="MlpPolicy",
