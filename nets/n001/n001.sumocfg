@@ -1,0 +1,13 @@
+<configuration>
+    <input>
+        <net-file value="n002.net.xml"/>
+        <route-files value="n002.rou.xml, pedestrian_flows.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="14400"/>
+    </time>
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+</configuration>

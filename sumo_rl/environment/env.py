@@ -91,7 +91,7 @@ class SumoEnvironment(gym.Env):
         waiting_time_memory: int = 1000,
         time_to_teleport: int = -1,
         delta_time: int = 5,
-        yellow_time: int = 2,
+        yellow_time: int = 3,
         min_green: int = 5,
         max_green: int = 50,
         single_agent: bool = False,

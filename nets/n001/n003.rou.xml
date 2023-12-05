@@ -1,0 +1,333 @@
+<routes>
+    <!-- 北 -->
+        <route id="route_ns1" edges="E4 E2" />
+        <route id="route_ns2" edges="E4 E2" />
+        <route id="route_ns3" edges="E4 E2" />
+        <route id="route_ns4" edges="E4 E2" />
+        <route id="route_ns5" edges="E4 E2" />
+        <route id="route_nw" edges="E4 E0" />
+        <route id="route_ne" edges="E4 E1" />
+    
+    <!-- 西方 -->
+        <route id="route_we1" edges="-E0 E1" />
+        <route id="route_we2" edges="-E0 E1" />
+        <route id="route_we3" edges="-E0 E1" />
+        <route id="route_we4" edges="-E0 E1" />
+        <route id="route_we5" edges="-E0 E1" />
+        <route id="route_wn" edges="-E0 E3" />
+        <route id="route_ws" edges="-E0 E2" />
+    
+    <!-- 東 -->
+        <route id="route_ew1" edges="-E1 E0" />
+        <route id="route_ew2" edges="-E1 E0" />
+        <route id="route_ew3" edges="-E1 E0" />
+        <route id="route_ew4" edges="-E1 E0" />
+        <route id="route_ew5" edges="-E1 E0" />
+        <route id="route_en" edges="-E1 E3" />
+        <route id="route_es" edges="-E1 E2" />
+    
+    <!-- 南 -->
+        <route id="route_sn1" edges="-E2 E3" />
+        <route id="route_sn2" edges="-E2 E3" />
+        <route id="route_sn3" edges="-E2 E3" />
+        <route id="route_sn4" edges="-E2 E3" />
+        <route id="route_sn5" edges="-E2 E3" />
+        <route id="route_se" edges="-E2 E1" />
+        <route id="route_sw" edges="-E2 E0" />
+    
+    <!-- 第一個小時 -->
+        <!-- 車_北出發 -->
+        <flow id="flow_ns1" route="route_ns1" begin="0" end="3600" vehsPerHour="170" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ns2" route="route_ns2" begin="0" end="3600" vehsPerHour="170" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ns3" route="route_ns3" begin="0" end="3600" vehsPerHour="170" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ns4" route="route_ns4" begin="0" end="3600" vehsPerHour="170" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ns5" route="route_ns5" begin="0" end="3600" vehsPerHour="170" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_nw" route="route_nw" begin="0" end="3600" vehsPerHour="896" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ne" route="route_ne" begin="0" end="3600" vehsPerHour="123" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_北出發 -->
+        <personFlow id="pedflow_ns1" begin="0" end="3600" perHour="308"><walk from="E4" to="E2"/></personFlow>
+    
+        <!-- 車_南出發 -->
+        <flow id="flow_sn1" route="route_sn1" begin="0" end="3600" vehsPerHour="122" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_sn2" route="route_sn2" begin="0" end="3600" vehsPerHour="122" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_sn3" route="route_sn3" begin="0" end="3600" vehsPerHour="122" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_sn4" route="route_sn4" begin="0" end="3600" vehsPerHour="122" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_sn5" route="route_sn5" begin="0" end="3600" vehsPerHour="122" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- <flow id="flow_sw" route="route_sw" begin="0" end="3600" vehsPerHour="0" departSpeed="max"
+            departPos="base" departLane="best" /> -->
+        <flow id="flow_se" route="route_se" begin="0" end="3600" vehsPerHour="245" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_sn1" begin="0" end="3600" perHour="59"><walk from="-E2" to="E3"/></personFlow>
+        
+        <!-- 車_東出發 -->
+        <flow id="flow_ew1" route="route_ew1" begin="0" end="3600" vehsPerHour="24" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ew2" route="route_ew2" begin="0" end="3600" vehsPerHour="24" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ew3" route="route_ew3" begin="0" end="3600" vehsPerHour="24" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ew4" route="route_ew4" begin="0" end="3600" vehsPerHour="24" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ew5" route="route_ew5" begin="0" end="3600" vehsPerHour="24" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_es" route="route_es" begin="0" end="3600" vehsPerHour="129" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_en" route="route_en" begin="0" end="3600" vehsPerHour="412" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_東出發 -->
+        <personFlow id="pedflow_ew1" begin="0" end="3600" perHour="484"><walk from="-E1" to="E0"/></personFlow>
+    
+        <!-- 車_西出發 -->
+        <flow id="flow_we1" route="route_we1" begin="0" end="3600" vehsPerHour="65" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_we2" route="route_we2" begin="0" end="3600" vehsPerHour="65" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_we3" route="route_we3" begin="0" end="3600" vehsPerHour="65" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_we4" route="route_we4" begin="0" end="3600" vehsPerHour="65" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_we5" route="route_we5" begin="0" end="3600" vehsPerHour="65" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_wn" route="route_wn" begin="0" end="3600" vehsPerHour="6" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ws" route="route_ws" begin="0" end="3600" vehsPerHour="8" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_西出發 -->    
+        <personFlow id="pedflow_we1" begin="0" end="3600" perHour="459"><walk from="-E0" to="E1"/></personFlow>
+        
+    
+    <!-- 第二個小時 -->
+        <!-- 車_北出發 -->
+        <flow id="flow_ns6" route="route_ns1" begin="3600" end="7200" vehsPerHour="208"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns7" route="route_ns2" begin="3600" end="7200" vehsPerHour="208"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns8" route="route_ns3" begin="3600" end="7200" vehsPerHour="208"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns8" route="route_ns4" begin="3600" end="7200" vehsPerHour="208"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns10" route="route_ns5" begin="3600" end="7200" vehsPerHour="208"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_nw2" route="route_nw" begin="3600" end="7200" vehsPerHour="885" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ne2" route="route_ne" begin="3600" end="7200" vehsPerHour="109" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_北出發 -->
+        <personFlow id="pedflow_ns2" begin="0" end="3600" perHour="308"><walk from="E4" to="E2"/></personFlow>
+    
+        <!-- 車_南出發 -->
+        <flow id="flow_sn6" route="route_sn1" begin="3600" end="7200" vehsPerHour="151"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn7" route="route_sn2" begin="3600" end="7200" vehsPerHour="151"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn8" route="route_sn3" begin="3600" end="7200" vehsPerHour="151"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn9" route="route_sn4" begin="3600" end="7200" vehsPerHour="151"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn10" route="route_sn5" begin="3600" end="7200" vehsPerHour="151"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- <flow id="flow_sw2" route="route_sw" begin="3600" end="7200" vehsPerHour="0" departSpeed="max"
+            departPos="base" departLane="best" /> -->
+        <flow id="flow_se2" route="route_se" begin="3600" end="7200" vehsPerHour="232" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_sn2" begin="0" end="3600" perHour="59"><walk from="-E2" to="E3"/></personFlow>
+    
+        <!-- 車_東出發 -->
+        <flow id="flow_ew6" route="route_ew1" begin="3600" end="7200" vehsPerHour="38"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew7" route="route_ew2" begin="3600" end="7200" vehsPerHour="38"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew8" route="route_ew3" begin="3600" end="7200" vehsPerHour="38"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew9" route="route_ew4" begin="3600" end="7200" vehsPerHour="38"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew10" route="route_ew5" begin="3600" end="7200" vehsPerHour="38"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_es2" route="route_es" begin="3600" end="7200" vehsPerHour="145"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_en2" route="route_en" begin="3600" end="7200" vehsPerHour="578" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_ew2" begin="0" end="3600" perHour="484"><walk from="-E1" to="E0"/></personFlow>
+    
+        <!-- 車_西出發 -->
+        <flow id="flow_we6" route="route_we1" begin="3600" end="7200" vehsPerHour="69"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we7" route="route_we2" begin="3600" end="7200" vehsPerHour="69"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we8" route="route_we3" begin="3600" end="7200" vehsPerHour="69"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we9" route="route_we4" begin="3600" end="7200" vehsPerHour="69"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we10" route="route_we5" begin="3600" end="7200" vehsPerHour="69"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_wn2" route="route_wn" begin="3600" end="7200" vehsPerHour="11" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ws2" route="route_ws" begin="3600" end="7200" vehsPerHour="14" departSpeed="max"
+            departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_we2" begin="0" end="3600" perHour="459"><walk from="-E0" to="E1"/></personFlow>
+    
+    
+    <!-- 第三個小時 -->
+        <!-- 車_北出發 -->
+        <flow id="flow_ns11" route="route_ns1" begin="7200" end="10800" vehsPerHour="154"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns12" route="route_ns2" begin="7200" end="10800" vehsPerHour="154"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns13" route="route_ns3" begin="7200" end="10800" vehsPerHour="154"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns14" route="route_ns4" begin="7200" end="10800" vehsPerHour="154"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns15" route="route_ns5" begin="7200" end="10800" vehsPerHour="154"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_nw3" route="route_nw" begin="7200" end="10800" vehsPerHour="533" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ne3" route="route_ne" begin="7200" end="10800" vehsPerHour="70"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_北出發 -->
+        <personFlow id="pedflow_ns3" begin="0" end="3600" perHour="308"><walk from="E4" to="E2"/></personFlow>  
+    
+        <!-- 車_南出發 -->
+        <flow id="flow_sn11" route="route_sn1" begin="7200" end="10800" vehsPerHour="221"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn12" route="route_sn2" begin="7200" end="10800" vehsPerHour="221"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn13" route="route_sn3" begin="7200" end="10800" vehsPerHour="221"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn14" route="route_sn4" begin="7200" end="10800" vehsPerHour="221"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn15" route="route_sn5" begin="7200" end="10800" vehsPerHour="221"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- <flow id="flow_sw3" route="route_sw" begin="7200" end="10800" vehsPerHour="0"
+            departSpeed="max" departPos="base" departLane="best" /> -->
+        <flow id="flow_se3" route="route_se" begin="7200" end="10800" vehsPerHour="220"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_sn3" begin="0" end="3600" perHour="69"><walk from="-E2" to="E3"/></personFlow>  
+    
+        <!-- 車_東出發 -->
+        <flow id="flow_ew11" route="route_ew1" begin="7200" end="10800" vehsPerHour="51"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew12" route="route_ew2" begin="7200" end="10800" vehsPerHour="51"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew13" route="route_ew3" begin="7200" end="10800" vehsPerHour="51"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew14" route="route_ew4" begin="7200" end="10800" vehsPerHour="51"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew15" route="route_ew5" begin="7200" end="10800" vehsPerHour="51"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_es3" route="route_es" begin="7200" end="10800" vehsPerHour="177"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_en3" route="route_en" begin="7200" end="10800" vehsPerHour="838"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_東出發 -->
+        <personFlow id="pedflow_ew3" begin="0" end="3600" perHour="497"><walk from="-E1" to="E0"/></personFlow>
+    
+        <!-- 車_西出發 -->
+        <flow id="flow_we11" route="route_we1" begin="7200" end="10800" vehsPerHour="37"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we12" route="route_we2" begin="7200" end="10800" vehsPerHour="37"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we13" route="route_we3" begin="7200" end="10800" vehsPerHour="37"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we14" route="route_we4" begin="7200" end="10800" vehsPerHour="37"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we15" route="route_we5" begin="7200" end="10800" vehsPerHour="37"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_wn3" route="route_wn" begin="7200" end="10800" vehsPerHour="21"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ws3" route="route_ws" begin="7200" end="10800" vehsPerHour="26"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_西出發 -->
+        <personFlow id="pedflow_we3" begin="0" end="3600" perHour="389"><walk from="-E0" to="E1"/></personFlow>
+    
+    
+    <!-- 第四個小時 -->
+        <!-- 車_北出發 -->
+        <flow id="flow_ns16" route="route_ns1" begin="10800" end="14400" vehsPerHour="129"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns17" route="route_ns2" begin="10800" end="14400" vehsPerHour="129"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns18" route="route_ns3" begin="10800" end="14400" vehsPerHour="129"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns19" route="route_ns4" begin="10800" end="14400" vehsPerHour="129"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ns20" route="route_ns5" begin="10800" end="14400" vehsPerHour="129"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_nw4" route="route_nw" begin="10800" end="14400" vehsPerHour="441" departSpeed="max"
+            departPos="base" departLane="best" />
+        <flow id="flow_ne4" route="route_ne" begin="10800" end="14400" vehsPerHour="46"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_北出發 -->
+        <personFlow id="pedflow_ns4" begin="0" end="3600" perHour="308"><walk from="E4" to="E2"/></personFlow>    
+    
+        <!-- 車_南出發 -->
+        <flow id="flow_sn16" route="route_sn1" begin="10800" end="14400" vehsPerHour="239"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn17" route="route_sn2" begin="10800" end="14400" vehsPerHour="239"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn18" route="route_sn3" begin="10800" end="14400" vehsPerHour="239"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn19" route="route_sn4" begin="10800" end="14400" vehsPerHour="239"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_sn20" route="route_sn5" begin="10800" end="14400" vehsPerHour="239"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- <flow id="flow_sw4" route="route_sw" begin="10800" end="14400" vehsPerHour="0"
+            departSpeed="max" departPos="base" departLane="best" /> -->
+        <flow id="flow_se4" route="route_se" begin="10800" end="14400" vehsPerHour="213"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_南出發 -->
+        <personFlow id="pedflow_sn4" begin="0" end="3600" perHour="69"><walk from="-E2" to="E3"/></personFlow>
+    
+        <!-- 車_東出發 -->
+        <flow id="flow_ew16" route="route_ew1" begin="10800" end="14400" vehsPerHour="56"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew17" route="route_ew2" begin="10800" end="14400" vehsPerHour="56"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew18" route="route_ew3" begin="10800" end="14400" vehsPerHour="56"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew19" route="route_ew4" begin="10800" end="14400" vehsPerHour="56"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ew20" route="route_ew5" begin="10800" end="14400" vehsPerHour="56"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_es4" route="route_es" begin="10800" end="14400" vehsPerHour="178"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_en4" route="route_en" begin="10800" end="14400" vehsPerHour="919"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_東出發 -->
+        <personFlow id="pedflow_ew4" begin="0" end="3600" perHour="497"><walk from="-E1" to="E0"/></personFlow>
+    
+        <!-- 車_西出發 -->
+        <flow id="flow_we16" route="route_we1" begin="10800" end="14400" vehsPerHour="39"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we17" route="route_we2" begin="10800" end="14400" vehsPerHour="39"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we18" route="route_we3" begin="10800" end="14400" vehsPerHour="39"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we19" route="route_we4" begin="10800" end="14400" vehsPerHour="39"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_we20" route="route_we5" begin="10800" end="14400" vehsPerHour="39"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_wn4" route="route_wn" begin="10800" end="14400" vehsPerHour="18"
+            departSpeed="max" departPos="base" departLane="best" />
+        <flow id="flow_ws4" route="route_ws" begin="10800" end="14400" vehsPerHour="28"
+            departSpeed="max" departPos="base" departLane="best" />
+        <!-- 行人_西出發 -->
+        <personFlow id="pedflow_we4" begin="0" end="3600" perHour="389"><walk from="-E0" to="E1"/></personFlow>
+    
+    </routes>

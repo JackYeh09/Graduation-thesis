@@ -17,14 +17,16 @@ from sumo_rl import SumoEnvironment
 
 if __name__ == "__main__":
     env = SumoEnvironment(
-        net_file="/workspace/pj/sumo-rl/nets/2way-single-intersection/single-intersection.net.xml",
-        route_file="/workspace/pj/sumo-rl/nets/2way-single-intersection/single-intersection-vhvh.rou.xml",
-        out_csv_name="/workspace/pj/sumo-rl/outputs/2way-single-intersection/dqn",
+        net_file="/workspace/pj/sumo-rl/nets/n001/n002.net.xml",
+        route_file="/workspace/pj/sumo-rl/nets/n001/n002.rou.xml",
+        out_csv_name="/workspace/pj/sumo-rl/outputs/n001/dqn",
         single_agent=True,
         use_gui=True,
-        num_seconds=100000,
+        num_seconds=14400,
         reward_fn="pressure",
     )
+
+
 
     model = DQN(
         env=env,
@@ -37,4 +39,6 @@ if __name__ == "__main__":
         exploration_final_eps=0.01,
         verbose=1,
     )
-    model.learn(total_timesteps=100000)
+    model.learn(total_timesteps=14400)
+
+    model.save("ped_weight", ":/")
